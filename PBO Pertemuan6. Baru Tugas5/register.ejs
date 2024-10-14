@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f0f0f0; /* Latar belakang abu-abu terang */
+            font-family: 'Verdana', sans-serif; /* Mengganti font ke Verdana */
+            height: 100vh; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 400px;
+            width: 100%;
+            padding: 40px;
+            background-color: #fff; /* Latar belakang putih solid */
+            border-radius: 15px; /* Sudut lebih membulat */
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2); /* Bayangan lebih dalam */
+            text-align: left; /* Teks rata kiri */
+            border-left: 5px solid #4CAF50; /* Menambahkan garis hijau di kiri */
+        }
+
+        h1 {
+            color: #4CAF50; /* Warna hijau pada judul */
+            margin-bottom: 25px;
+            font-weight: bold;
+        }
+
+        .form-control {
+            border-radius: 10px; /* Membulatkan sudut input lebih besar */
+            border: 2px solid #ddd; /* Border yang lebih tebal */
+            box-shadow: none; /* Menghilangkan bayangan input */
+        }
+
+        .form-control:focus {
+            border-color: #4CAF50; /* Mengubah warna border saat fokus */
+            box-shadow: none; /* Tetap tanpa bayangan saat fokus */
+        }
+
+        button {
+            margin-top: 15px;
+            background-color: #4CAF50; /* Tombol hijau */
+            border: none;
+            border-radius: 10px; /* Membulatkan tombol */
+            padding: 10px;
+            color: white; /* Teks putih */
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #45a049; /* Tombol hijau lebih gelap saat di-hover */
+        }
+
+        .list-group-item {
+            border-bottom: 1px solid #eee;
+        }
+
+        .btn-block {
+            display: block;
+            width: 100%;
+        }
+
+        a {
+            color: #4CAF50; /* Link berwarna hijau */
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #388E3C; /* Link hijau lebih gelap saat di-hover */
+        }
+
+        p {
+            margin-top: 15px;
+            text-align: center;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="my-4">Register</h1>
+        
+        <form action="/register" method="POST">
+            <div class="form-group">
+                <input type="text" name="username" class="form-control" placeholder="Username" required>
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" class="form-control" placeholder="Password" required>
+            </div>
+            <div class="form-group">
+                <input type="password" name="confirmPassword" class="form-control" placeholder="Confirm Password" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Register</button>
+        </form>
+        <p class="mt-3">
+            Already have an account? <a href="/">Login here</a>
+        </p>
+    </div>
+</body>
+</html>
